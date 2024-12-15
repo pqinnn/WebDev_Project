@@ -352,3 +352,81 @@ main {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/*staff dashboard*/
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    }
+    .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #f1f1f1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .pagination a {
+    color: #333;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    }
+    .pagination a:hover {
+    background-color: #ddd;
+    }
+    .pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    }
+    .navbar2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #2C3E50; 
+        padding: 10px 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    .navbar2 ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .navbar2 ul li {
+        margin: 0 25px;
+    }
+    
+    .navbar2 ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 18px;
+        transition: color 0.3s ease;
+    }
+    
+    .navbar2 ul li a:hover {
+        color: #e06a4e; 
+    }
+    .navbar2 .trytgok {
+        width: 100vw;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+    .user-icon2 {
+        position: relative;
+        margin-left: auto;
+    }
+    .user-icon2 img {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+    }
+    .user-icon2 img:hover {
+        transform: scale(1.1);
+    }
+    
