@@ -5,7 +5,6 @@
 }
 
 
-/* Reset some default styles */
 body, html {
     margin: 0;
     padding: 0;
@@ -35,7 +34,7 @@ header .logo img {
 }
 
 header .signin-button {
-    background-color: #e06a4e; /* Coral color */
+    background-color: #e06a4e; 
     color: white;
     padding: 10px 20px;
     border: none;
@@ -47,33 +46,35 @@ header .signin-button:hover {
     background-color: #d6593e;
 }
 
+
+/*HOMEPAGE STYLE*/
 /* Main content styles */
 main {
     background-color: #dceaf5;
     padding: 0;
 }
 
-/* Full-width image styles */
+
 .slider {
     width: 100%;
     margin: 0;
 }
 
 .ktmb-image {
-    width: 100%; /* Covers the entire viewport width */ 
+    width: 100%; 
     height: auto; /* Maintains the aspect ratio */
     display: block;
 }
 
-/* Register Section Styles */
+/* Register Styles */
 .register {
     text-align: center;
     margin-top: 50px;
-    background: linear-gradient(135deg, #4475ad, #e06a4e); /* Blue to Coral gradient */
+    background: linear-gradient(135deg, #4475ad, #e06a4e); 
     color: white;
     border-radius: 12px;
     padding: 40px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Stronger shadow for depth */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); 
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -82,43 +83,36 @@ main {
 }
 
 .register:hover {
-    transform: scale(1.05); /* Slight zoom-in effect on hover */
+    transform: scale(1.05); /* Zoom-in effect on hover */
 }
 
 .register h1 {
     font-size: 32px;
     font-weight: bold;
     margin-bottom: 20px;
-    letter-spacing: 1px; /* Space out letters for emphasis */
-}
-
-.register p {
-    font-size: 18px;
-    margin-bottom: 30px;
-    color: #f4f4f4; /* Light gray for better contrast */
-    line-height: 1.6;
+    letter-spacing: 1px; 
 }
 
 .register-button {
-    background-color: #ffffff; /* White button for contrast */
-    color: #4475ad; /* KTMB blue */
+    background-color: #ffffff; 
+    color: #4475ad; 
     padding: 18px 40px;
     font-size: 20px;
     font-weight: bold;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    text-transform: uppercase; /* Button text in all caps */
+    text-transform: uppercase; 
     letter-spacing: 1px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Button shadow for depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     transition: all 0.3s ease;
 }
 
 .register-button:hover {
     background-color: #4475ad;
-    color: white; /* White text on hover */
+    color: white; 
     transform: translateY(-2px); /* Subtle lift effect */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25); /* Stronger shadow on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25); 
 }
 
 .register a {
@@ -129,8 +123,7 @@ main {
 }
 
 .register a:hover {
-    color: #e06a4e; /* Coral color on hover */
-    text-decoration: underline; /* Underline on hover for interactivity */
+    color: #e06a4e; 
 }
 
 .introduction {
@@ -153,7 +146,7 @@ main {
 
 .introduction b {
     font-weight: bold;
-    color: #4475ad; /* Highlighting important keywords */
+    color: #4475ad; 
 }
 
 .introduction ul {
@@ -169,6 +162,193 @@ main {
 .introduction h2 {
     font-size: 24px;
     margin-bottom: 20px;
-    color: #4475ad; /* KTMB blue */
+    color: #4475ad; 
     text-align: center;
 }
+
+/*MAINTENANCE MANAGEMENT PAGE STYLE*/
+/* Navigation bar styles*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2C3E50; 
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #e06a4e; 
+}
+
+/* User icon styles */
+.user-icon {
+    position: relative;
+}
+
+.user-icon img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.user-icon img:hover {
+    transform: scale(1.1);
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 1000;
+    min-width: 150px;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: block;
+    color: #333;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: #e06a4e;
+    color: white;
+}
+
+/* Create Maintenance Task Table Style */
+.create-task {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-bottom: 20px;
+}
+
+.create-task table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+.create-task th, .create-task td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.create-task th {
+    background-color: #4475ad;
+    color: white;
+    font-weight: bold;
+}
+
+.create-task input[type="text"],
+.create-task input[type="date"],
+.create-task select {
+    width: 90%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Add Task Button Style */
+.add-task-button-container {
+    display: flex;
+    justify-content: flex-end; 
+    margin-top: 10px; 
+}
+
+.add-task-button {
+    background-color: #4475ad; 
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-task-button:hover {
+    background-color: #366a99; 
+}
+
+/* Maintenance Task Table */
+.task-table {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+}
+
+.task-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.task-table th, .task-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.task-table th {
+    background-color: #4475ad;
+    color: white;
+    font-weight: bold;
+}
+
+/* Calendar Style */
+.calendar-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.calendar-container .calendar {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
