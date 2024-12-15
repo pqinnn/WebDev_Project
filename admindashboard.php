@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Admin Dashboard</title>
         <link rel="stylesheet" href="styles.css">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat" rel="stylesheet">
     </head>
 
     <body>
