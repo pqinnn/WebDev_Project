@@ -353,6 +353,13 @@ main {
 }
 
 /*staff dashboard*/
+.page-title {
+    text-align: left;
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #4475ad;
+}
 .pagination-container {
     display: flex;
     justify-content: center;
@@ -428,6 +435,70 @@ main {
     }
     .user-icon2 img:hover {
         transform: scale(1.1);
+    }
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+        overflow: hidden;
+        z-index: 1000;
+        min-width: 150px;
+    }
+    
+    .dropdown-menu.show {
+        display: block;
+    }
+    
+    .dropdown-menu a {
+        display: block;
+        color: #333;
+        padding: 10px 15px;
+        text-decoration: none;
+        font-size: 16px;
+        transition: background-color 0.2s ease;
+    }
+    
+    .dropdown-menu a:hover {
+        background-color: #e06a4e;
+        color: white;
+    }
+    .dashboard-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin: 20px;
+    }
+    
+    .dashboard-item {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .dashboard-item h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        color: #4475ad;
+    }
+    
+    .dashboard-item p {
+        margin-bottom: 15px;
+    }
+    
+    .dashboard-item a {
+        color: #4475ad;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    .dashboard-item a:hover {
+        color: #366a99;
     }
     
     /*feedback Management*/
