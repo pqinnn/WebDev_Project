@@ -488,3 +488,102 @@ main {
     .save-btn:hover {
         background-color: #366a99;
     }
+    
+/* Existing styles remain untouched */
+
+/* Register and Login Page Styles */
+.form-container {
+    background: linear-gradient(135deg, #4475ad, #e06a4e); /* Blue-to-orange gradient */
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: white; /* White text for readability */
+}
+
+.form-container h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(68, 117, 173, 0.6); /* Blue glow effect */
+}
+
+/* Buttons */
+.form-button {
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #ffffff; /* White background */
+    color: #4475ad; /* Blue text */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.form-button:hover {
+    background-color: #4475ad;
+    color: white;
+    transform: translateY(-3px); /* Lift effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Links in Form */
+.form-container a {
+    color: #f4f4f4;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.form-container a:hover {
+    color: #e06a4e;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .form-container {
+        padding: 20px;
+    }
+
+    .form-container h1 {
+        font-size: 28px;
+    }
+
+    .form-button {
+        font-size: 16px;
+    }
+}
