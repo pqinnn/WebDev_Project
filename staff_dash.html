@@ -37,14 +37,54 @@
             </div>
         </div>
     </nav>
-    <!-- Pagination -->
-       <div class="pagination">
-    <a href="#">1</a>
-    <a href="#">2</a>
-    <a href="#">3</a>
-    <a href="#">...</a>
-    <a href="#">142</a>
-    <a href="#">Next &raquo;</a>
+
+    <!-- Page Title -->
+<h1 class="page-title">Dashboard | <small>Staff Dashboard</small></h1>
+
+<!-- Dashboard Section -->
+<div class="dashboard-container">
+    <div class="dashboard-item">
+        <h2>Upcoming Tasks</h2>
+        <p>You have 3 upcoming tasks to complete.</p>
+        <a href="#">View Tasks</a>
+    </div>
+    <div class="dashboard-item">
+        <h2>Recent Feedback</h2>
+        <p>You have received 2 new feedback messages.</p>
+        <a href="#">View Feedback</a>
+    </div>
+    <div class="dashboard-item">
+        <h2>Reported Issues</h2>
+        <p>There are 5 reported issues that need attention.</p>
+        <a href="#">View Issues</a>
+    </div>
 </div>
+
+    <!-- Pagination -->
+    <div class="pagination">
+       <a href="#">1</a>
+       <a href="#">2</a>
+       <a href="#">3</a>
+       <a href="#">...</a>
+       <a href="#">6</a>
+       <a href="#">Next &raquo;</a>
+    </div>
+
+    <script>
+        // JavaScript for Dropdown Menu
+        const userIcon = document.getElementById('userIcon');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+
+        userIcon.addEventListener('click', () => {
+            dropdownMenu.classList.toggle('show');
+        });
+
+        // Close dropdown when clicking outside
+        window.addEventListener('click', (e) => {
+            if (!userIcon.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                dropdownMenu.classList.remove('show');
+            }
+        });
+    </script>
 </body>
 </html>  
