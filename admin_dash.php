@@ -10,84 +10,97 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- Header Section -->
-    <header>
-        <div class="logo">
-            <table>
-                <tr>
-                    <td><img src="src/logo_miniktm.png" alt="KTMB Logo"></td>
-                    <td><h3>KERETAPI TANAH MELAYU BERHAD</h3></td>
-                    <td><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Owner - ALYA FARISAH</h3></td>
-                    <td><h3>&nbsp;&nbsp;&nbsp;Welcome, <?php echo $_SESSION['fullname']; ?>!</h3></td>
-                </tr>
-            </table>
-        </div>
-    </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admin Dashboard</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <ul>
-            <li><a href="admin_dash.php">Dashboard</a></li>
-            <li><a href="maintenance.html" class="active">Maintenance Task Management</a></li>
-            <li><a href="#">User Management</a></li>
-            <li><a href="#">Reported Issue</a></li>
-            <li><a href="#">Feedback Management</a></li>
-        </ul>
-        <!-- User Icon -->
-        <div class="user-icon">
-            <img src="src/user icon.png" alt="User Icon" id="userIcon">
-            <div class="dropdown-menu">
-                <a href="#">User Profile</a>
-                <a href="logout.php">Log Out</a>
+    <body>
+    
+    <!-- Header Section -->
+        <header>
+            <div class="logo">
+                <table>
+                    <tr>
+                        <td><img src="src/logo_miniktm.png" alt="KTMB Logo"></td>
+                        <td><h3>KERETAPI TANAH MELAYU BERHAD</h3></td>
+                        <td><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Owner - ALYA FARISAH</h3></td>
+                        <td><h3>&nbsp;&nbsp;&nbsp;Welcome, <?php echo $_SESSION['fullname']; ?>!</h3></td>
+                    </tr>
+                </table>
             </div>
-        </div>
-    </nav>
+        </header>
+
+       <!-- Navigation Bar -->
+       <nav class="navbar2">
+            <ul class="trytgok">
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="maintenance.html">Maintenance Task Management</a></li>
+                <li><a href="UserManagementPage.html">User Management</a></li>
+                <li><a href="#">Reported Issue</a></li>
+                <li><a href="aboutUs_staff.php" class="active">About Us</a></li>
+            </ul>
+        
+            <!-- User Icon -->
+            <div class="user-icon2">
+                <img src="src/user icon.png" alt="User Icon" id="userIcon">
+                <div class="dropdown-menu">
+                    <a href="#">User Profile</a>
+                    <a href="#">Log Out</a>
+                </div>
+            </div>
+        </nav>
 
     <!-- Main Dashboard Content -->
-    <main>
-        <section class="overview-panels">
-            <div class="panel">
-                <h3>Total Users</h3>
-                <p>Admins: 5 | Staff: 120 | Users: 500</p>
-            </div>
-            <div class="panel">
-                <h3>Reported Issues</h3>
-                <p>Open: 25 | In Progress: 10 | Resolved: 200</p>
-            </div>
-            <div class="panel">
-                <h3>Maintenance Tasks</h3>
-                <p>Pending: 15 | Completed: 30</p>
-            </div>
-            <div class="panel">
-                <h3>Login Stats</h3>
-                <p>Daily Logins: 150 | Monthly Logins: 3200</p>
-            </div>
-        </section>
 
-        <section class="notifications">
-            <h2>Recent Notifications</h2>
-            <ul>
-                <li>New issue reported by staff #45.</li>
-                <li>Maintenance task #120 nearing its deadline.</li>
-                <li>User #200 completed profile update.</li>
-                <li>Suspicious login attempt detected.</li>
-            </ul>
-        </section>
+    <!-- Page Title -->
+    <h1 class="page-title">Dashboard | <small>Admin Dashboard</small></h1>
 
-        <section class="data-visualization">
-            <h2>Reports and Analytics</h2>
-            <div class="chart-container">
-                <div id="issue-status-chart">[Chart Placeholder: Issue Statistics]</div>
-                <div id="task-completion-chart">[Chart Placeholder: Task Progress]</div>
-            </div>
-        </section>
-    </main>
-</body>
+    <!-- Dashboard Section -->
+    <div class="dashboard-container">
+        <div class="dashboard-item">
+            <h2>Maintenance Task Management</h2>
+            <p><strong>Total Tasks:</strong> 45</p>
+            <p><strong>Pending Tasks:</strong> 10</p>
+            <p><strong>Completed Tasks:</strong> 35</p>
+            <a href="#">View Issues</a>
+        </div>
+
+        <div class="dashboard-item">
+            <h2>User Management</h2>
+                <p><strong>Total Users:</strong> 150</p>
+                <p><strong>Active Users:</strong> 140</p>
+                <p><strong>Inactive Users:</strong> 10</p>
+                <a href="#">View Issues</a>
+        </div>
+
+        <div class="dashboard-item">
+            <h2>Reported Issues</h2>
+            <p><strong>Total Issues Reported:</strong> 20</p>
+            <p><strong>Resolved Issues:</strong> 15</p>
+            <p><strong>Pending Issues:</strong> 5</p>
+            <a href="#">View Issues</a>
+        </div>
+    </div>
+
+
+    <script>
+        // JavaScript for Dropdown Menu
+        const userIcon = document.getElementById('userIcon');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+
+        userIcon.addEventListener('click', () => {
+            dropdownMenu.classList.toggle('show');
+        });
+
+        // Close dropdown when clicking outside
+        window.addEventListener('click', (e) => {
+            if (!userIcon.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                dropdownMenu.classList.remove('show');
+            }
+        });
+    </script>
+    </body>
 </html>

@@ -33,9 +33,11 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'staff') {
         <ul class="trytgok">
             <li><a href="staff_dash.php">Dashboard</a></li>
             <li><a href="#">Issue Report</a></li>
-            <li><a href="#">Feedback</a></li>
             <li><a href="#">History</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="aboutUs_staff.php">About Us</a></li>
         </ul>
+
         <!-- User Icon -->
         <div class="user-icon2">
             <img src="src/user icon.png" alt="User Icon" id="userIcon">
@@ -66,16 +68,6 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'staff') {
             <p>There are 5 reported issues that need attention.</p>
             <a href="#">View Issues</a>
         </div>
-    </div>
-
-    <!-- Pagination -->
-    <div class="pagination">
-        <a href="#">1</a>
-        <a href="#">2</a>
-        <a href="#">3</a>
-        <a href="#">...</a>
-        <a href="#">6</a>
-        <a href="#">Next &raquo;</a>
     </div>
 
     <script>

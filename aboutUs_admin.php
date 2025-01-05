@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+// Check if the user is logged in and has the 'admin' role
+if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
+    header("Location: login.html");
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -17,7 +27,7 @@
                         <td><img src="src/logo_miniktm.png" alt="KTMB Logo"></td>
                         <td><h3>KERETAPI TANAH MELAYU BERHAD</h3></td>
                         <td><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Owner - Alya Farisah</h3></td>
-                        <td><h3>&nbsp;&nbsp;&nbsp;Welcome, [username] !</h3></td>
+                        <td><h3>&nbsp;&nbsp;&nbsp;Welcome, <?php echo $_SESSION['fullname']; ?>!</h3></td>
                     </tr>
                 </table>
             </div>
