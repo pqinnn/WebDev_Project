@@ -201,18 +201,21 @@ main {
 }
 
 /* User icon styles */
-.user-icon {
-    position: relative;
+header .user-icon {
+    position: absolute; /* Allows positioning relative to the parent container */
+    top: 10px; /* Adjusts vertical spacing from the top */
+    right: 10px; /* Adjusts horizontal spacing from the right */
+    transform: translateY(0); /* Ensures proper alignment */
 }
 
-.user-icon img {
-    width: 40px;
-    height: 40px;
+header .user-icon img {
+    width: 50px;
+    height: 50px;
     cursor: pointer;
     transition: transform 0.2s ease;
 }
 
-.user-icon img:hover {
+header .user-icon img:hover {
     transform: scale(1.1);
 }
 
