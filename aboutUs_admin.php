@@ -71,6 +71,21 @@
             <P>The Maintenance System is vital to maintaining the integrity and safety of KTMB’s operations, ensuring that we meet the highest standards for service quality and reliability. KTMB is committed to continually improving the efficiency of our services while prioritizing the well-being of our passengers and the sustainability of our infrastructure.</P>
         </div>
     </main>
+    <script>
+        // JavaScript for Dropdown Menu
+        const userIcon = document.getElementById('userIcon');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
 
+        userIcon.addEventListener('click', () => {
+            dropdownMenu.classList.toggle('show');
+        });
+
+        // Close dropdown when clicking outside
+        window.addEventListener('click', (e) => {
+            if (!userIcon.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                dropdownMenu.classList.remove('show');
+            }
+        });
+    </script>
 </body>
 </html>
