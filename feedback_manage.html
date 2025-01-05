@@ -39,105 +39,79 @@
         </div>
     </nav>
 
-<!-- Feedback Management Table -->
-<div class="feedback-table-container">
-    <h2>Feedback Management</h2>
-    <table class="feedback-table">
-        <thead>
-            <tr>
-                <th>Feedback ID</th>
-                <th>Date</th>
-                <th>Content</th>
-                <th>Response</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Feedback data will be populated here dynamically -->
-        </tbody>
-    </table>
-</div>
+    <!-- FAQ Section -->
+    <div class="faq-container">
+        <h1>Frequently Asked Questions</h1>
+        
+        <div class="faq-section">
+            <h2>General Questions</h2>
+            <div class="faq-item">
+                <div class="faq-question">What is the Railway Maintenance Management System?</div>
+                <div class="faq-answer">The Railway Maintenance Management System is a comprehensive platform designed for KTMB to manage and track maintenance tasks, user roles, and system security through RBAC and MFA implementation.</div>
+            </div>
 
-<!-- JavaScript to handle feedback management -->
-<script>
-    // Fetch feedback data from the feedback page
-    function getFeedbackData() {
-        // Replace this with your actual API call to fetch feedback data
-        return [
-            { id: 1, date: '2023-05-01', content: 'Feedback 1', response: 'Response 1' },
-            { id: 2, date: '2023-05-02', content: 'Feedback 2', response: 'Response 2' },
-            { id: 3, date: '2023-05-03', content: 'Feedback 3', response: 'Response 3' },
-            { id: 4, date: '2023-05-04', content: 'Feedback 4', response: 'Response 4' }
-        ];
-    }
+            <div class="faq-item">
+                <div class="faq-question">How does the Role-Based Access Control (RBAC) work?</div>
+                <div class="faq-answer">RBAC assigns specific permissions to different user roles (e.g., admin, maintenance staff, supervisor) to ensure users can only access the features and information relevant to their responsibilities.</div>
+            </div>
 
-    // Populate the feedback table
-    function populateFeedbackTable() {
-        const feedbackData = getFeedbackData();
-        const tableBody = document.querySelector('.feedback-table tbody');
+            <div class="faq-item">
+                <div class="faq-question">What is Multi-Factor Authentication (MFA)?</div>
+                <div class="faq-answer">MFA adds an extra layer of security by requiring users to verify their identity through multiple methods (e.g., password + SMS code or email verification) before accessing the system.</div>
+            </div>
+        </div>
 
-        feedbackData.forEach(feedback => {
-            const row = document.createElement('tr');
-            row.innerHTML = `
-                <td>${feedback.id}</td>
-                <td>${feedback.date}</td>
-                <td>${feedback.content}</td>
-                <td><input type="text" value="${feedback.response}" class="response-input"></td>
-                <td>
-                    <button class="edit-btn">Edit</button>
-                    <button class="save-btn" style="display: none;">Save</button>
-                </td>
-            `;
-            tableBody.appendChild(row);
+        <div class="faq-section">
+            <h2>Maintenance Management</h2>
+            <div class="faq-item">
+                <div class="faq-question">How do I create a new maintenance task?</div>
+                <div class="faq-answer">Navigate to the Maintenance Task Management section, click on "Create New Task," fill in the required details including task description, priority, and deadline, then submit the form.</div>
+            </div>
 
-            // Add event listeners for edit and save buttons
-            const editBtn = row.querySelector('.edit-btn');
-            const saveBtn = row.querySelector('.save-btn');
-            const responseInput = row.querySelector('.response-input');
+            <div class="faq-item">
+                <div class="faq-question">How can I track the progress of maintenance tasks?</div>
+                <div class="faq-answer">The system provides real-time status updates and tracking features in the dashboard. You can view task status, completion percentage, and maintenance history.</div>
+            </div>
+        </div>
 
-            editBtn.addEventListener('click', () => {
-                responseInput.disabled = false;
-                editBtn.style.display = 'none';
-                saveBtn.style.display = 'inline';
-            });
+        <div class="faq-section">
+            <h2>User Management & Security</h2>
+            <div class="faq-item">
+                <div class="faq-question">How do I reset my password?</div>
+                <div class="faq-answer">Click on "Forgot Password" on the login page, enter your registered email, and follow the instructions sent to your email to reset your password.</div>
+            </div>
 
-            saveBtn.addEventListener('click', () => {
-                responseInput.disabled = true;
-                editBtn.style.display = 'inline';
-                saveBtn.style.display = 'none';
+            <div class="faq-item">
+                <div class="faq-question">What should I do if I can't access my account?</div>
+                <div class="faq-answer">Contact your system administrator or the IT support team for assistance. They can help verify your identity and restore access to your account.</div>
+            </div>
+        </div>
+    </div>
 
-                // Update the feedback response in the database
-                updateFeedbackResponse(feedback.id, responseInput.value);
+    <script>
+        // JavaScript for Dropdown Menu
+        const userIcon = document.getElementById('userIcon');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+
+        userIcon.addEventListener('click', () => {
+            dropdownMenu.classList.toggle('show');
+        });
+
+        // Close dropdown when clicking outside
+        window.addEventListener('click', (e) => {
+            if (!userIcon.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                dropdownMenu.classList.remove('show');
+            }
+        });
+
+        // FAQ Toggle Functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                faqItem.classList.toggle('active');
             });
         });
-    }
-
-    // Function to update the feedback response in the database
-    function updateFeedbackResponse(feedbackId, newResponse) {
-        // Replace this with your actual API call to update the feedback response
-        console.log(`Updating feedback ${feedbackId} with new response: ${newResponse}`);
-    }
-
-    // Call the function to populate the feedback table
-    populateFeedbackTable();
-</script>
-
-<script>
-    // JavaScript for Dropdown Menu
-    const userIcon = document.getElementById('userIcon');
-    const dropdownMenu = document.querySelector('.dropdown-menu');
-
-    userIcon.addEventListener('click', () => {
-        dropdownMenu.classList.toggle('show');
-    });
-
-    // Close dropdown when clicking outside
-    window.addEventListener('click', (e) => {
-        if (!userIcon.contains(e.target) && !dropdownMenu.contains(e.target)) {
-            dropdownMenu.classList.remove('show');
-        }
-    });
-</script>
+    </script>
 
 </body>
 </html>
