@@ -31,11 +31,11 @@
     <nav class="navbar">
         <ul>
             <li><a href="index.html">Dashboard</a></li>
-            <li><a href="maintenance.html" class="active">Maintenance Task Management</a></li>
+            <li><a href="maintenance.php" class="active">Maintenance Task Management</a></li>
             <li><a href="UserManagementPage.html">User Management</a></li>
             <li><a href="#">Reported Issue</a></li>
-            <li><a href="#">FAQs</a></li>
-            <li><a href="#">About Us</a></li>
+            <li><a href="feedback_manage.html">FAQs</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
         </ul>
         <!-- User Icon -->
     </nav>        
