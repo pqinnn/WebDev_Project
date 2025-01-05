@@ -505,60 +505,180 @@ header .user-icon img:hover {
     }
     
     /*feedback Management*/
-    .feedback-table-container {
+    .faq-container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
         background-color: #ffffff;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        margin: 20px auto;
-        max-width: 900px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        padding-bottom: 20px;
     }
 
-    .feedback-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 10px 0;
-    }
-
-    .feedback-table th, .feedback-table td {
-        border: 1px solid #ddd;
-        padding: 10px;
+    .faq-container h1 {
+        color: #4475ad;
         text-align: center;
+        margin-bottom: 30px;
     }
 
-    .feedback-table th {
-        background-color: #4475ad;
-        color: white;
+    .faq-section {
+        margin-bottom: 30px;
+    }
+
+    .faq-section h2 {
+        color: #4475ad;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #4475ad;
+    }
+
+    .faq-item {
+        margin-bottom: 20px;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+
+    .faq-item:hover {
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .faq-question {
         font-weight: bold;
-    }
-
-    .response-input {
-        width: 90%;
-        padding: 8px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-    }
-
-    .edit-btn,
-    .save-btn {
-        background-color: #4475ad;
-        color: white;
-        padding: 8px 16px;
-        border: none;
-        border-radius: 4px;
+        color: #333;
+        margin-bottom: 10px;
         cursor: pointer;
-        transition: background-color 0.3s ease;
+        padding: 10px;
+        background-color: #f5f5f5;
+        border-radius: 4px;
     }
 
-    .save-btn {
-        background-color: #3b6b99;
+    .faq-answer {
+        color: #666;
+        padding: 10px;
+        display: none;
     }
 
-    .edit-btn:hover,
-    .save-btn:hover {
-        background-color: #366a99;
+    .faq-item.active .faq-answer {
+        display: block;
     }
+    
+/* Existing styles remain untouched */
+
+/* Register and Login Page Styles */
+.form-container {
+    background: linear-gradient(135deg, #4475ad, #e06a4e); /* Blue-to-orange gradient */
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: white; /* White text for readability */
+}
+
+.form-container h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(68, 117, 173, 0.6); /* Blue glow effect */
+}
+
+/* Buttons */
+.form-button {
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #ffffff; /* White background */
+    color: #4475ad; /* Blue text */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.form-button:hover {
+    background-color: #4475ad;
+    color: white;
+    transform: translateY(-3px); /* Lift effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Links in Form */
+.form-container a {
+    color: #f4f4f4;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.form-container a:hover {
+    color: #e06a4e;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .form-container {
+        padding: 20px;
+    }
+
+    .form-container h1 {
+        font-size: 28px;
+    }
+
+    .form-button {
+        font-size: 16px;
+    }
+}
+.form-group select {
+    width: 100%; /* Full width of the container */
+    padding: 12px; /* Vertical padding */
+    font-size: 18px; /* Increase font size for better visibility */
+    height: 50px; /* Make the select box half bigger */
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Rounded edges */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    cursor: pointer;
+}
+
+.form-group select:focus {
+    outline: none;
+    border-color: #4475ad; /* Add a blue border on focus */
+    box-shadow: 0 0 5px rgba(68, 117, 173, 0.6);
+}
+.forget-password {
+    margin-bottom: 25px;
+    text-align: left;
+}
