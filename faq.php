@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feedback Management Page</title>
+    <title>FAQ</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,24 +20,26 @@
         </div>
     </header>
         
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Dashboard</a></li>
-            <li><a href="maintenance.html" class="active">Maintenance Task Management</a></li>
-            <li><a href="#">User Management</a></li>
-            <li><a href="feedback_manage.html">Feedback Management</a></li>
-            <li><a href="#">Reported Issue</a></li>
-        </ul>
-        <!-- User Icon -->
-        <div class="user-icon">
-            <img src="src/user icon.png" alt="User Icon" id="userIcon">
-            <div class="dropdown-menu">
-                <a href="#">User Profile</a>
-                <a href="#">Log Out</a>
+        
+        <!-- Navigation Bar -->
+        <nav class="navbar2">
+            <ul class="trytgok">
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="maintenance.html">Maintenance Task Management</a></li>
+                <li><a href="UserManagementPage.html">User Management</a></li>
+                <li><a href="#">Reported Issue</a></li>
+                <li><a href="aboutUs_staff.php" class="active">About Us</a></li>
+            </ul>
+        
+            <!-- User Icon -->
+            <div class="user-icon2">
+                <img src="src/user icon.png" alt="User Icon" id="userIcon">
+                <div class="dropdown-menu">
+                    <a href="#">User Profile</a>
+                    <a href="#">Log Out</a>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
     <!-- FAQ Section -->
     <div class="faq-container">
