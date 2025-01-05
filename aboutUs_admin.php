@@ -7,35 +7,54 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
     <header>
         <div class="logo">
             <table>
                 <tr>
                     <td><img src="src/logo_miniktm.png" alt="KTMB Logo"></td>
                     <td><h3>KERETAPI TANAH MELAYU BERHAD</h3></td>
-                    <td><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Owner - ALYA FARISAH</h3></td>
+                    <td><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Owner - Alya Farisah</h3></td>
+                    <td><h3>&nbsp;&nbsp;&nbsp;Welcome, [username] !</h3></td>
                 </tr>
             </table>
         </div>
-
-        <a href="register.html ">
-            <button class="signin-button">Sign in</button>
-        <!-- </a> -->
     </header>
+        
+    <!-- Navigation Bar -->
+    <nav class="navbar2">
+        <ul class="trytgok">
+        <li><a href="index.html">Dashboard</a></li>
+            <li><a href="maintenance.html" class="active">Maintenance Task Management</a></li>
+            <li><a href="#">User Management</a></li>
+            <li><a href="#">Reported Issue</a></li>
+            <li><a href="aboutUs_staff.php">About Us</a></li>
+        </ul>
+        
+        <!-- User Icon -->
+        <div class="user-icon2">
+            <img src="src/user icon.png" alt="User Icon" id="userIcon">
+            <div class="dropdown-menu">
+                <a href="#">User Profile</a>
+                <a href="#">Log Out</a>
+            </div>
+        </div>
+    </nav>
+
 
     <main>
+        
         <div class="picture">
             <img class="ktmb-image" src="src/web-img.png" alt="Welcome to KTMB Maintenance Management System">
-        </div>
-    
-        <!-- Register button -->
-         <div class="register">
-            <h1>Haven't Register?</h1>
-            <!-- <a href=" "> Register page url here-->
-                <button class="register-button">Register Now!</button>
-            <!-- </a> -->
-         </div>
-        
+        </div>        
 
         <!-- Introduction text -->
         <div class="introduction">
