@@ -21,7 +21,6 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'staff') {
                 <tr>
                     <td><img src="src/logo_miniktm.png" alt="KTMB Logo"></td>
                     <td><h3>KERETAPI TANAH MELAYU BERHAD</h3></td>
-                    <td><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Owner - Haziq</h3></td>
                     <td><h3>&nbsp;&nbsp;&nbsp;Welcome, <?php echo $_SESSION['fullname']; ?>!</h3></td>
                 </tr>
             </table>
@@ -65,6 +64,26 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'staff') {
             <a href="#">View Issues</a>
         </div>
     </div>
+
+    <!-- Maintenance Task Table -->
+    <section class="task-table">
+            <h2>Maintenance Task Table</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Task ID</th>
+                        <th>Task Name</th>
+                        <th>Priority Level</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php include 'display_tasks.php'; ?>
+                </tbody>
+            </table>
+        </section>
+    </main>
 
     <script>
         // JavaScript for Dropdown Menu
