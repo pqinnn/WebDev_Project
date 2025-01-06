@@ -143,7 +143,6 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'staff') {
                 <tr>
                     <td><img src="src/logo_miniktm.png" alt="KTMB Logo"></td>
                     <td><h3>KERETAPI TANAH MELAYU BERHAD</h3></td>
-                    <td><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Owner - INTAN SABRINA</h3></td>
                     <td><h3>&nbsp;&nbsp;&nbsp;Welcome, <?php echo $_SESSION['fullname']; ?>!</h3></td>
                 </tr>
             </table>

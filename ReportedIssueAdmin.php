@@ -106,9 +106,8 @@ $result = $conn->query($sql);
             <div class="logo">
                 <table>
                     <tr>
-                        <td><img src="logo_miniktm.png" alt="KTMB Logo"></td>
+                        <td><img src="src/logo_miniktm.png" alt="KTMB Logo"></td>
                         <td><h3>KERETAPI TANAH MELAYU BERHAD</h3></td>
-                        <td><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Owner - INTAN SABRINA </h3></td>
                         <td><h3>&nbsp;&nbsp;&nbsp;Welcome, <?php echo $_SESSION['fullname']; ?>!</h3></td>
                     </tr>
                 </table>
@@ -127,7 +126,7 @@ $result = $conn->query($sql);
         
             <!-- User Icon -->
             <div class="user-icon2">
-                <img src="user icon.png" alt="User Icon" id="userIcon">
+                <img src="src/user icon.png" alt="User Icon" id="userIcon">
                 <div class="dropdown-menu">
                     <a href="#">User Profile</a>
                     <a href="logout.php">Log Out</a>
