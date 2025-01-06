@@ -11,7 +11,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
 $servername = "localhost"; // Change if needed
 $username = "root";        // Database username
 $password = "";            // Database password
-$database = "your_database"; // Replace with your database name
+$database = "ktmb_issues"; // Replace with your database name
 
 $conn = new mysqli($servername, $username, $password, $database);
 
@@ -21,10 +21,10 @@ if ($conn->connect_error) {
 }
 
 // Fetch issues from the database
-$sql = "SELECT IssueID, Description, ReportedBy, Status, DateReported FROM Issues";
+$sql = "SELECT id, title, description, priority, category, related_issue, file_path, reported_by, reported_date, status FROM Issues";
 $result = $conn->query($sql);
-
 ?>
+
 
 
 <!DOCTYPE html>
