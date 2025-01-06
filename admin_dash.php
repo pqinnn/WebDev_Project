@@ -36,8 +36,8 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
        <!-- Navigation Bar -->
        <nav class="navbar2">
             <ul class="trytgok">
-                <li><a href="index.html">Dashboard</a></li>
-                <li><a href="maintenance.html">Maintenance Task Management</a></li>
+                <li><a href="admin_dash.php">Dashboard</a></li>
+                <li><a href="maintenance.php">Maintenance Task Management</a></li>
                 <li><a href="UserManagementPage.html">User Management</a></li>
                 <li><a href="#">Reported Issue</a></li>
                 <li><a href="aboutUs_staff.php" class="active">About Us</a></li>
@@ -65,7 +65,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
             <p><strong>Total Tasks:</strong> 45</p>
             <p><strong>Pending Tasks:</strong> 10</p>
             <p><strong>Completed Tasks:</strong> 35</p>
-            <a href="#">View Issues</a>
+            <a href="maintenance.php">View Issues</a>
         </div>
 
         <div class="dashboard-item">
