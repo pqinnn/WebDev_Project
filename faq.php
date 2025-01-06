@@ -13,7 +13,7 @@
                 <tr>
                     <td><img src="src/logo_miniktm.png" alt="KTMB Logo"></td>
                     <td><h3>KERETAPI TANAH MELAYU BERHAD</h3></td>
-                    <td><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Owner - Haziq</h3></td>
+                    <td><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3></td>
                     <td><h3>&nbsp;&nbsp;&nbsp;Welcome, [username] !</h3></td>
                 </tr>
             </table>
