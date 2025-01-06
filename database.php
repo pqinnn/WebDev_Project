@@ -1,6 +1,6 @@
 <?php
 $host = 'localhost'; // Database host
-$dbname = 'ktmb_maintenance'; // Database name
+$dbname = 'ktmb_maintenance_system'; // Database name
 $username = 'root'; // Database username
 $password = ''; // Database password
 
