@@ -470,28 +470,34 @@ header .user-icon img:hover {
         color: white;
     }
     .dashboard-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-        margin: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        gap: 30px;
+        margin: 40px auto;
+        max-width: 1200px;
+        padding:  20px;
     }
     
     .dashboard-item {
         background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+        padding: 25px;
         text-align: center;
+        width: 350px; /* Fixed width for both boxes */
+        min-height: 200px; 
+        flex: 0 1 350px;
     }
     
     .dashboard-item h2 {
-        font-size: 20px;
-        margin-bottom: 10px;
         color: #4475ad;
+        font-size: 22px;
+        margin-bottom: 15px;
     }
     
     .dashboard-item p {
-        margin-bottom: 15px;
+        margin-bottom: 20px;
     }
     
     .dashboard-item a {
