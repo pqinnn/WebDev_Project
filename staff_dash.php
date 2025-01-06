@@ -58,11 +58,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'staff') {
             <p>You have 3 upcoming tasks to complete.</p>
             <a href="#">View Tasks</a>
         </div>
-        <div class="dashboard-item">
-            <h2>Recent Feedback</h2>
-            <p>You have received 2 new feedback messages.</p>
-            <a href="#">View Feedback</a>
-        </div>
+    
         <div class="dashboard-item">
             <h2>Reported Issues</h2>
             <p>There are 5 reported issues that need attention.</p>
