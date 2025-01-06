@@ -750,3 +750,185 @@ main {
         margin-bottom: 20px;
     }
 }
+/* User profile styles */
+        .user-profile {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            display: flex;
+            align-items: center;
+        }
+
+        .user-profile .profile-picture {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+        .user-profile .profile-info h2 {
+            margin: 0;
+            font-size: 24px;
+            color: #4475ad;
+        }
+
+        .user-profile .profile-info p {
+            margin: 5px 0;
+            color: #666;
+        }
+
+        .user-profile .edit-profile {
+            margin-left: auto;
+            background-color: #4475ad;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .user-profile .edit-profile:hover {
+            background-color: #366a99;
+        }
+
+        /* Main Content */
+        main {
+            padding: 20px;
+        }
+
+        .page-title {
+            font-size: 32px;
+            color: #4475ad;
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .user-table-container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        .user-table-container table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .user-table-container th,
+        .user-table-container td {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            text-align: left;
+            font-size: 16px;
+        }
+
+        .user-table-container th {
+            background-color: #4475ad;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .user-table-container tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .user-table-container tr:hover {
+            background-color: #e6f1fa;
+        }
+
+        .user-table-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .add-user-button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #4475ad;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .add-user-button:hover {
+            background-color: #366a99;
+        }
+
+        /* Button Styles */
+        .edit-user-button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin-right: 5px;
+        }
+
+        .edit-user-button:hover {
+            background-color: #45a049;
+        }
+
+        .approve-user-button,
+        .delete-user-button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #e06a4e;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .approve-user-button:hover,
+        .delete-user-button:hover {
+            background-color: #d6593e;
+        }
+
+        /* Pagination */
+        .pagination-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .pagination {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pagination a {
+            color: #333;
+            padding: 10px 15px;
+            text-decoration: none;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .pagination a:hover {
+            background-color: #e06a4e;
+            color: white;
+        }
+
+        .pagination a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
