@@ -65,7 +65,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
             <p><strong>Total Tasks:</strong> 45</p>
             <p><strong>Pending Tasks:</strong> 10</p>
             <p><strong>Completed Tasks:</strong> 35</p>
-            <a href="maintenance.php">View Issues</a>
+            <a href="maintenance.php">View Task</a>
         </div>
 
         <div class="dashboard-item">
@@ -73,7 +73,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
                 <p><strong>Total Users:</strong> 150</p>
                 <p><strong>Active Users:</strong> 140</p>
                 <p><strong>Inactive Users:</strong> 10</p>
-                <a href="#">View Issues</a>
+                <a href="#">View User</a>
         </div>
 
         <div class="dashboard-item">
