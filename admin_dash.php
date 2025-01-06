@@ -26,7 +26,6 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
                     <tr>
                         <td><img src="src/logo_miniktm.png" alt="KTMB Logo"></td>
                         <td><h3>KERETAPI TANAH MELAYU BERHAD</h3></td>
-                        <td><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Owner - ALYA FARISAH</h3></td>
                         <td><h3>&nbsp;&nbsp;&nbsp;Welcome, <?php echo $_SESSION['fullname']; ?>!</h3></td>
                     </tr>
                 </table>
@@ -36,19 +35,19 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
        <!-- Navigation Bar -->
        <nav class="navbar2">
             <ul class="trytgok">
-                <li><a href="admin_dash.php">Dashboard</a></li>
+                <li><a href="admin_dash.php" class="active">Dashboard</a></li>
                 <li><a href="maintenance.php">Maintenance Task Management</a></li>
-                <li><a href="UserManagementPage.html">User Management</a></li>
+                <li><a href="usermanage.php">User Management</a></li>
                 <li><a href="#">Reported Issue</a></li>
-                <li><a href="aboutUs_staff.php" class="active">About Us</a></li>
+                <li><a href="aboutUs_admin.php">About Us</a></li>
             </ul>
         
             <!-- User Icon -->
             <div class="user-icon2">
                 <img src="src/user icon.png" alt="User Icon" id="userIcon">
                 <div class="dropdown-menu">
-                    <a href="#">User Profile</a>
-                    <a href="#">Log Out</a>
+                    <a href="userprofileadmin.php">User Profile</a>
+                    <a href="logout.php">Log Out</a>
                 </div>
             </div>
         </nav>
@@ -62,18 +61,18 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
     <div class="dashboard-container">
         <div class="dashboard-item">
             <h2>Maintenance Task Management</h2>
-            <p><strong>Total Tasks:</strong> 45</p>
-            <p><strong>Pending Tasks:</strong> 10</p>
-            <p><strong>Completed Tasks:</strong> 35</p>
+            <p><strong>Total Tasks:</strong> 10</p>
+            <p><strong>Pending Tasks:</strong> 2</p>
+            <p><strong>Completed Tasks:</strong> 8</p>
             <a href="maintenance.php">View Task</a>
         </div>
 
         <div class="dashboard-item">
             <h2>User Management</h2>
-                <p><strong>Total Users:</strong> 150</p>
-                <p><strong>Active Users:</strong> 140</p>
+                <p><strong>Total Users:</strong> 30</p>
+                <p><strong>Active Users:</strong> 20</p>
                 <p><strong>Inactive Users:</strong> 10</p>
-                <a href="#">View User</a>
+                <a href="usermanage.php">View User</a>
         </div>
 
         <div class="dashboard-item">
