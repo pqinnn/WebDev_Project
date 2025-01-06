@@ -11,7 +11,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
 $servername = "localhost"; // Change if needed
 $username = "root";        // Database username
 $password = "";            // Database password
-$database = "your_database"; // Replace with your database name
+$database = "ktmb_issues"; // Replace with your database name
 
 $conn = new mysqli($servername, $username, $password, $database);
 
@@ -21,10 +21,10 @@ if ($conn->connect_error) {
 }
 
 // Fetch issues from the database
-$sql = "SELECT IssueID, Description, ReportedBy, Status, DateReported FROM Issues";
+$sql = "SELECT id, title, description, priority, category, related_issue, file_path, reported_by, reported_date, status FROM Issues";
 $result = $conn->query($sql);
-
 ?>
+
 
 
 <!DOCTYPE html>
@@ -108,7 +108,6 @@ $result = $conn->query($sql);
                     <tr>
                         <td><img src="src/logo_miniktm.png" alt="KTMB Logo"></td>
                         <td><h3>KERETAPI TANAH MELAYU BERHAD</h3></td>
-                        <td><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Owner - INTAN SABRINA </h3></td>
                         <td><h3>&nbsp;&nbsp;&nbsp;Welcome, <?php echo $_SESSION['fullname']; ?>!</h3></td>
                     </tr>
                 </table>
@@ -130,51 +129,62 @@ $result = $conn->query($sql);
                 <img src="src/user icon.png" alt="User Icon" id="userIcon">
                 <div class="dropdown-menu">
                     <a href="#">User Profile</a>
-                    <a href="#">Log Out</a>
+                    <a href="logout.php">Log Out</a>
                 </div>
             </div>
         </nav>
-    <main>
-        <div class="reported-issues">
-            <h1>Reported Issues</h1>
-            <p>Welcome, Admin! Below are the reported issues that require your attention.</p>
+        <main>
+    <div class="reported-issues">
+        <h1>Reported Issues</h1>
+        <p>Welcome, Admin! Below are the reported issues that require your attention.</p>
 
-            <!-- Container for the Table -->
-            <div class="table-container">
-                <table class="issues-table">
-                    <thead>
-                        <tr>
-                            <th>Issue ID</th>
-                            <th>Description</th>
-                            <th>Reported By</th>
-                            <th>Status</th>
-                            <th>Date Reported</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                            <?php
-                            if ($result->num_rows > 0) {
-                                // Output data of each row
-                                while ($row = $result->fetch_assoc()) {
-                                    echo "<tr>";
-                                    echo "<td>" . $row['IssueID'] . "</td>";
-                                    echo "<td>" . $row['Description'] . "</td>";
-                                    echo "<td>" . $row['ReportedBy'] . "</td>";
-                                    echo "<td>" . $row['Status'] . "</td>";
-                                    echo "<td>" . $row['DateReported'] . "</td>";
-                                    echo "<td><button class='resolve-btn'>Resolve</button></td>";
-                                    echo "</tr>";
-                                }
-                            } else {
-                                echo "<tr><td colspan='6'>No issues found</td></tr>";
-                            }
-                            ?>
-                    </tbody>
-                </table>
-            </div> 
-        </div>         
-    </main>
+        <!-- Container for the Table -->
+        <div class="table-container">
+            <table class="issues-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Priority</th>
+                        <th>Category</th>
+                        <th>Related Issue</th>
+                        <th>File Path</th>
+                        <th>Reported By</th>
+                        <th>Reported Date</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    if ($result->num_rows > 0) {
+                        // Output data of each row
+                        while ($row = $result->fetch_assoc()) {
+                            echo "<tr>";
+                            echo "<td>" . $row['id'] . "</td>";
+                            echo "<td>" . $row['title'] . "</td>";
+                            echo "<td>" . $row['description'] . "</td>";
+                            echo "<td>" . $row['priority'] . "</td>";
+                            echo "<td>" . $row['category'] . "</td>";
+                            echo "<td>" . $row['related_issue'] . "</td>";
+                            echo "<td>" . $row['file_path'] . "</td>";
+                            echo "<td>" . $row['reported_by'] . "</td>";
+                            echo "<td>" . $row['reported_date'] . "</td>";
+                            echo "<td>" . $row['status'] . "</td>";
+                            echo "<td><button class='resolve-btn'>Resolve</button></td>";
+                            echo "</tr>";
+                        }
+                    } else {
+                        echo "<tr><td colspan='11'>No issues found</td></tr>";
+                    }
+                    ?>
+                </tbody>
+            </table>
+        </div> 
+    </div>         
+</main>
+
 
 </body>
 </html>
