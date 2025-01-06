@@ -128,13 +128,14 @@ main {
 
 .introduction {
     width: 100%;
-    max-width: 900px;
+    max-width: 1200px; /* Increase the width for better spacing */
     margin: 30px auto;
     padding: 20px;
     background-color: #ffffff;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Prevent content overflow */
 }
 
 .introduction p {
@@ -164,6 +165,56 @@ main {
     margin-bottom: 20px;
     color: #4475ad; 
     text-align: center;
+}
+
+
+.media-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between items */
+    margin-top: 20px;
+}
+
+.media-item {
+    background-color: #ffffff; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 10px;
+    text-align: center; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+
+.media-item:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+
+.media-item img {
+    width: 100%; 
+    height: auto; 
+    max-height: 200px; 
+    object-fit: cover; 
+    border-radius: 8px; 
+    display: block; 
+    margin-bottom: 10px; 
+}
+
+
+.media-item video {
+    width: 100%; 
+    height: auto; 
+    max-height: 200px; 
+    object-fit: cover; 
+    border-radius: 8px; 
+    margin-bottom: 10px; 
+}
+
+.media-item p {
+    font-size: 16px;
+    color: #333; 
+    margin: 0; 
 }
 
 /*MAINTENANCE MANAGEMENT PAGE STYLE*/
