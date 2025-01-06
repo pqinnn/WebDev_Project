@@ -61,16 +61,16 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
     <div class="dashboard-container">
         <div class="dashboard-item">
             <h2>Maintenance Task Management</h2>
-            <p><strong>Total Tasks:</strong> 45</p>
-            <p><strong>Pending Tasks:</strong> 10</p>
-            <p><strong>Completed Tasks:</strong> 35</p>
+            <p><strong>Total Tasks:</strong> 10</p>
+            <p><strong>Pending Tasks:</strong> 2</p>
+            <p><strong>Completed Tasks:</strong> 8</p>
             <a href="maintenance.php">View Task</a>
         </div>
 
         <div class="dashboard-item">
             <h2>User Management</h2>
-                <p><strong>Total Users:</strong> 150</p>
-                <p><strong>Active Users:</strong> 140</p>
+                <p><strong>Total Users:</strong> 30</p>
+                <p><strong>Active Users:</strong> 20</p>
                 <p><strong>Inactive Users:</strong> 10</p>
                 <a href="usermanage.php">View User</a>
         </div>
