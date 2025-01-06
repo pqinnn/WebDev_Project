@@ -26,7 +26,6 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
                     <tr>
                         <td><img src="src/logo_miniktm.png" alt="KTMB Logo"></td>
                         <td><h3>KERETAPI TANAH MELAYU BERHAD</h3></td>
-                        <td><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Owner - Alya Farisah</h3></td>
                         <td><h3>&nbsp;&nbsp;&nbsp;Welcome, <?php echo $_SESSION['fullname']; ?>!</h3></td>
                     </tr>
                 </table>
@@ -36,19 +35,19 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
         <!-- Navigation Bar -->
         <nav class="navbar2">
             <ul class="trytgok">
-                <li><a href="index.html">Dashboard</a></li>
-                <li><a href="maintenance.html">Maintenance Task Management</a></li>
-                <li><a href="UserManagementPage.html">User Management</a></li>
+                <li><a href="admin_dash.php">Dashboard</a></li>
+                <li><a href="maintenance.php">Maintenance Task Management</a></li>
+                <li><a href="usermanage.php">User Management</a></li>
                 <li><a href="#">Reported Issue</a></li>
-                <li><a href="aboutUs_staff.php" class="active">About Us</a></li>
+                <li><a href="aboutUs_admin.php" class="active">About Us</a></li>
             </ul>
         
             <!-- User Icon -->
             <div class="user-icon2">
                 <img src="src/user icon.png" alt="User Icon" id="userIcon">
                 <div class="dropdown-menu">
-                    <a href="#">User Profile</a>
-                    <a href="#">Log Out</a>
+                    <a href="userprofileadmin.php">User Profile</a>
+                    <a href="logout.">Log Out</a>
                 </div>
             </div>
         </nav>

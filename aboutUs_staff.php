@@ -24,7 +24,6 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'staff') {
                     <tr>
                         <td><img src="src/logo_miniktm.png" alt="KTMB Logo"></td>
                         <td><h3>KERETAPI TANAH MELAYU BERHAD</h3></td>
-                        <td><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Owner - Alya Farisah</h3></td>
                         <td><h3>&nbsp;&nbsp;&nbsp;Welcome, <?php echo $_SESSION['fullname']; ?>!</h3></td>
                     </tr>
                 </table>
@@ -34,10 +33,10 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'staff') {
         <!-- Navigation Bar -->
         <nav class="navbar2">
             <ul class="trytgok">
-                <li><a href="staff_dash.html">Dashboard</a></li>
+                <li><a href="staff_dash.php">Dashboard</a></li>
                 <li><a href="#">Issue Report</a></li>
                 <li><a href="#">History</a></li>
-                <li><a href="#">FAQ</a></li>
+                <li><a href="faq.php">FAQ</a></li>
                 <li><a href="aboutUs_staff.php" class="active">About Us</a></li>
             </ul>
 
@@ -46,7 +45,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'staff') {
                 <img src="src/user icon.png" alt="User Icon" id="userIcon">
                 <div class="dropdown-menu">
                     <a href="#">User Profile</a>
-                    <a href="#">Log Out</a>
+                    <a href="logout.php">Log Out</a>
                 </div>
             </div>
         </nav>
