@@ -34,6 +34,69 @@ $result = $conn->query($sql);
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Admin Dashboard</title>
         <link rel="stylesheet" href="styles.css">
+        <style>
+
+        main {
+    padding: 20px;
+}
+
+.reported-issues h1 {
+    color: #01397e;
+    margin-bottom: 10px;
+}
+
+.reported-issues p {
+    margin-bottom: 20px;
+}
+
+/* Table Container */
+.table-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow-x: auto;
+}
+
+.issues-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.issues-table thead {
+    background-color: #024da0;
+    color: #fff;
+}
+
+.issues-table th,
+.issues-table td {
+    text-align: left;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+}
+
+.issues-table tbody tr:nth-child(odd) {
+    background-color: #f7f9fc;
+}
+
+.issues-table tbody tr:hover {
+    background-color: #e1e9f7;
+}
+
+.issues-table .resolve-btn {
+    background-color: #0269d9;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.issues-table .resolve-btn:hover {
+    background-color: #01397e;
+}
+</style>
     </head>
 
     <body>
